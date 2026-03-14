@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 
 const invitationDetails = [
@@ -14,6 +13,7 @@ const invitationDetails = [
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
   const [hasInvitationImage, setHasInvitationImage] = useState(true);
+  const assetBase = process.env.NODE_ENV === "production" ? "/PozivnicaDemo" : "";
 
   return (
     <main className="invitation-shell">
@@ -30,34 +30,25 @@ export default function HomePage() {
             aria-label={isOpen ? "Zatvori pozivnicu" : "Otvori pozivnicu"}
           >
             <article className="envelope" aria-hidden="true">
-              <Image
-                src="/envelope-open.png"
+              <img
+                src={`${assetBase}/envelope-open.png`}
                 alt=""
-                fill
-                priority
                 className="envelope-layer envelope-open"
-                sizes="(max-width: 720px) 94vw, 860px"
               />
-              <Image
-                src="/envelope-closed.png"
+              <img
+                src={`${assetBase}/envelope-closed.png`}
                 alt=""
-                fill
-                priority
                 className="envelope-layer envelope-closed"
-                sizes="(max-width: 720px) 94vw, 860px"
               />
             </article>
 
             <article className="invitation-card">
               {hasInvitationImage ? (
                 <div className="invitation-image-wrap">
-                  <Image
-                    src="/invitation-card.jpg"
+                  <img
+                    src={`${assetBase}/invitation-card.jpg`}
                     alt="Wedding invitation"
-                    fill
                     className="invitation-image"
-                    sizes="(max-width: 720px) 84vw, 470px"
-                    priority
                     onError={() => setHasInvitationImage(false)}
                   />
                 </div>

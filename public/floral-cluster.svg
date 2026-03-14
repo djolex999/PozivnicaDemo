@@ -1,0 +1,63 @@
+<svg width="320" height="220" viewBox="0 0 320 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="petal" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.35 0.3) scale(1)">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.7" stop-color="#F4F0EC"/>
+      <stop offset="1" stop-color="#DDD8D5"/>
+    </radialGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#97C36F"/>
+      <stop offset="0.55" stop-color="#4D8C49"/>
+      <stop offset="1" stop-color="#214F24"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F3D889"/>
+      <stop offset="0.45" stop-color="#C89B39"/>
+      <stop offset="1" stop-color="#8B661F"/>
+    </linearGradient>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#000000" flood-opacity="0.22"/>
+    </filter>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#soft)" opacity="0.35">
+    <ellipse cx="125" cy="108" rx="78" ry="44" fill="#A97E2D"/>
+  </g>
+
+  <g stroke="url(#gold)" stroke-width="4" stroke-linecap="round" opacity="0.95">
+    <path d="M120 138C96 138 78 119 78 96C78 72 96 54 120 54" />
+    <path d="M126 150C95 150 67 124 67 92" />
+    <path d="M138 152C118 136 108 116 108 92" />
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M84 80C76 43 94 10 134 4C123 31 126 54 140 82C118 96 101 96 84 80Z" fill="url(#leaf)"/>
+    <path d="M64 126C42 98 40 66 67 39C82 66 95 78 122 93C112 120 95 131 64 126Z" fill="url(#leaf)"/>
+    <path d="M84 166C54 148 45 120 59 89C82 107 98 113 126 115C126 144 113 159 84 166Z" fill="url(#leaf)"/>
+    <path d="M117 145C130 109 155 92 193 98C174 121 170 142 174 170C145 173 128 165 117 145Z" fill="url(#leaf)"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <g transform="translate(134 74)">
+      <ellipse cx="0" cy="-28" rx="28" ry="38" fill="url(#petal)" transform="rotate(10)"/>
+      <ellipse cx="29" cy="-7" rx="28" ry="38" fill="url(#petal)" transform="rotate(48)"/>
+      <ellipse cx="18" cy="26" rx="28" ry="38" fill="url(#petal)" transform="rotate(88)"/>
+      <ellipse cx="-18" cy="26" rx="28" ry="38" fill="url(#petal)" transform="rotate(132)"/>
+      <ellipse cx="-29" cy="-6" rx="28" ry="38" fill="url(#petal)" transform="rotate(168)"/>
+      <circle cx="0" cy="0" r="18" fill="#B6B13C"/>
+      <circle cx="0" cy="0" r="12" fill="#E1D661"/>
+    </g>
+    <g transform="translate(74 146) scale(0.9)">
+      <ellipse cx="0" cy="-28" rx="28" ry="38" fill="url(#petal)" transform="rotate(10)"/>
+      <ellipse cx="29" cy="-7" rx="28" ry="38" fill="url(#petal)" transform="rotate(48)"/>
+      <ellipse cx="18" cy="26" rx="28" ry="38" fill="url(#petal)" transform="rotate(88)"/>
+      <ellipse cx="-18" cy="26" rx="28" ry="38" fill="url(#petal)" transform="rotate(132)"/>
+      <ellipse cx="-29" cy="-6" rx="28" ry="38" fill="url(#petal)" transform="rotate(168)"/>
+      <circle cx="0" cy="0" r="18" fill="#B6B13C"/>
+      <circle cx="0" cy="0" r="12" fill="#E1D661"/>
+    </g>
+  </g>
+</svg>

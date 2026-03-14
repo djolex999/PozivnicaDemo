@@ -80,7 +80,7 @@ export default function HomePage() {
         </div>
 
         <div className="copy-block">
-          <p className="eyebrow">Wedding invitation</p>
+          <p className="eyebrow">Pozivnica</p>
           <button type="button" className="toggle-button" onClick={() => setIsOpen((current) => !current)}>
             {isOpen ? "Zatvori kovertu" : "Otvori kovertu"}
           </button>

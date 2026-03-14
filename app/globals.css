@@ -88,7 +88,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   gap: 1rem;
   padding: 2.5rem 1.5rem 3rem;
 }
@@ -99,7 +99,7 @@ button {
   justify-content: center;
   perspective: 1600px;
   width: 100%;
-  min-height: 48rem;
+  min-height: min(48rem, 76dvh);
 }
 
 .envelope-button {
@@ -279,10 +279,11 @@ button {
   align-items: center;
   gap: 0.85rem;
   max-width: 23rem;
+  text-align: center;
 }
 
 .eyebrow {
-  margin: 0 0 1rem;
+  margin: 0;
   color: rgba(217, 188, 114, 0.9);
   font-size: 0.82rem;
   letter-spacing: 0.28em;
@@ -338,12 +339,12 @@ button {
 
 @media (max-width: 1080px) {
   .stage {
-    gap: 2rem;
-    padding: 2rem 1.25rem 3rem;
+    gap: 1.35rem;
+    padding: 1.5rem 1.1rem 2.25rem;
   }
 
   .scene {
-    min-height: 40rem;
+    min-height: min(40rem, 72dvh);
   }
 
   .scene-open .invitation-card {
@@ -352,23 +353,77 @@ button {
 }
 
 @media (max-width: 720px) {
+  .invitation-shell {
+    min-height: 100dvh;
+  }
+
   .envelope-button {
-    width: min(94vw, 560px);
-    height: min(132vw, 760px);
+    width: min(95vw, 540px);
+    height: min(128vw, 720px);
   }
 
   .envelope {
-    width: min(94vw, 560px);
+    inset: auto 50% 1rem;
+    width: min(95vw, 540px);
   }
 
   .invitation-card {
-    width: min(84vw, 380px);
-    height: min(130vw, 580px);
-    bottom: 3rem;
+    width: min(82vw, 360px);
+    height: min(126vw, 560px);
+    bottom: 2.4rem;
   }
 
   .scene-open .invitation-card {
-    transform: translateX(-50%) translateY(-6.3rem) scale(1);
+    transform: translateX(-50%) translateY(-5.1rem) scale(1);
+  }
+
+  .stage {
+    gap: 1rem;
+    padding: 1rem 0.85rem 1.5rem;
+  }
+
+  .scene {
+    min-height: min(37rem, 68dvh);
+  }
+
+  .copy-block {
+    gap: 0.7rem;
+  }
+
+  .eyebrow {
+    font-size: 0.74rem;
+    letter-spacing: 0.2em;
+  }
+
+  .toggle-button {
+    min-width: 10rem;
+    padding: 0.78rem 1.15rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .envelope-button {
+    width: 96vw;
+    height: min(136vw, 700px);
+  }
+
+  .envelope {
+    width: 96vw;
+  }
+
+  .invitation-card {
+    width: min(84vw, 330px);
+    height: min(132vw, 520px);
+    bottom: 2rem;
+  }
+
+  .scene {
+    min-height: min(34rem, 64dvh);
+  }
+
+  .scene-open .invitation-card {
+    transform: translateX(-50%) translateY(-4.2rem) scale(1);
   }
 }
 
